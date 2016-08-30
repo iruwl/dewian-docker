@@ -1,0 +1,3 @@
+Khairul Anwar  <https://iruwl.github.io>
+
+1. Hapus tanda pagar pada /etc/apt/apt.conf.d/00proxy untuk mengaktifkan proxy, dan tentunya proxy pada host sudah diaktifkan
