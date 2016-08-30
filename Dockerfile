@@ -52,4 +52,4 @@ USER docker
 ADD notes.txt /home/docker
 
 # Default command
-CMD /bin/bash
+CMD ["/bin/bash"]
