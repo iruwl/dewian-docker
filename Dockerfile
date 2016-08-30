@@ -3,6 +3,18 @@ MAINTAINER  Khairul Anwar  <https://iruwl.github.io>
 
 ENV DEBIAN_FRONTEND noninteractive
 
+# Exclude some directories to reduce size
+RUN echo "path-exclude /usr/share/doc/*\n#\
+we need to keep copyright files for legal reasons\n\
+path-include /usr/share/doc/*/copyright\n\
+path-exclude /usr/share/man/*\n\
+path-exclude /usr/share/groff/*\n\
+path-exclude /usr/share/info/*\n#\
+lintian stuff is small, but really unnecessary\n\
+path-exclude /usr/share/lintian/*\n\
+path-exclude /usr/share/linda/*" \
+>> /etc/dpkg/dpkg.cfg.d/01_nodoc
+
 # Update/Upgrade/Cleansing
 RUN apt-get update && \
     apt-get upgrade -y && \
