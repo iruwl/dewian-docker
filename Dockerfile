@@ -19,7 +19,7 @@ path-exclude /usr/share/linda/*" \
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -yq --no-install-recommends apt-utils && \
-    apt-get install -yq --no-install-recommends sudo nano && \
+    apt-get install -yq --no-install-recommends sudo nano wget && \
     apt-get clean -y && \
     apt-get autoclean -y && \
     apt-get autoremove -y && \
